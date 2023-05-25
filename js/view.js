@@ -43,8 +43,10 @@ export default class View {
     this.#initializeMoves(moves);
 
     if (isComplete) {
-      this.#openModal(winner ? `${winner.name} wins!` : 'Tie!');
-      return;
+      setTimeout(() => {
+        this.#openModal(winner ? `${winner.name} wins!` : 'Tie!');
+        return;
+      }, 300);
     }
   }
 
