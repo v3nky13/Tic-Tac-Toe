@@ -105,8 +105,10 @@ export default class View {
 
     const icon = this.$.menuBtn.querySelector('i');
 
-    icon.classList.toggle('fa-chevron-down');
-    icon.classList.toggle('fa-chevron-up');
+    if (icon.classList.contains('fa-chevron-up')) {
+      icon.classList.toggle('fa-chevron-down');
+      icon.classList.toggle('fa-chevron-up');
+    }
   }
 
   #toggleMenu() {
